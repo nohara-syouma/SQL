@@ -1,0 +1,115 @@
+﻿# A5:ER FORMAT:16
+# A5:ER ENCODING:UTF8
+# A5:ER Mk-1 Copyright © 2007 m.matsubara
+# A5:SQL Mk-2 Version 2.17.1 Copyright © 1997 - 2022 m.matsubara
+#  https://a5m2.mmatsubara.com
+
+[Manager]
+ProjectName=
+Author=
+MaxEntityRowShow=1000
+ReadOnlyRecommend=0
+Page=Main
+PageInfo="Main",2,"A3Landscape",$FFFFFF
+LogicalView=1
+DecodeDomain=0
+ViewModePageIndividually=1
+ViewMode=2
+ViewFormat=0
+UseNondependenceDashLine=0
+FontName=Tahoma
+FontSize=6
+PaperSize=A4Landscape
+HeaderLeft=
+HeaderCenter=
+HeaderRight=
+FooterLeft=
+FooterCenter=
+FooterRight=
+ShowPageoutRelation=1
+DefaultPkName=%0:s_PKC
+DefaultPkIndexName=%0:s_PKI
+DefaultIndexName=%0:s_IX%1:d
+DefaultFkName=%0:s_FK%1:d
+SqlSeparator=0
+UpperCaseKeyword=0
+ShowTag=1
+ShowCommonAttributes=0
+BugFixEntityWidth=1
+
+[Entity]
+PName=main
+LName=main
+Comment=
+TableOption=
+Page=Main
+Left=50
+Top=50
+Field="slip_id","slip_id","integer","NOT NULL",0,"","",$FFFFFFFF,""
+Field="cash_register_no","cash_register_no","integer",,,"","",$FFFFFFFF,""
+Field="employee_no","employee_no","integer",,,"","",$FFFFFFFF,""
+Field="sales_tax_rate","sales_tax_rate","integer",,,"","",$FFFFFFFF,""
+Field="subtotal_8","subtotal_8","integer",,,"","",$FFFFFFFF,""
+Field="subtotal_10","subtotal_10","integer",,,"","",$FFFFFFFF,""
+Field="shop_id","shop_id","integer",,,"","",$FFFFFFFF,""
+Field="sales_id","sales_id","integer",,,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+Position="Main",50,50
+ZOrder=-1
+
+[Entity]
+PName=product
+LName=product
+Comment=
+TableOption=
+Page=Main
+Left=350
+Top=50
+Field="product_id","product_id","integer",,,"","",$FFFFFFFF,""
+Field="product_name","product_name","character varying(50)",,,"","",$FFFFFFFF,""
+Field="product_price","product_price","integer",,,"","",$FFFFFFFF,""
+Field="discount_amount","discount_amount","integer",,,"","",$FFFFFFFF,""
+Field="consumption_tax","consumption_tax","integer",,,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+Position="Main",350,50
+ZOrder=-2
+
+[Entity]
+PName=sales
+LName=sales
+Comment=
+TableOption=
+Page=Main
+Left=650
+Top=50
+Field="sales_id","sales_id","integer",,,"","",$FFFFFFFF,""
+Field="date","date","date",,,"","",$FFFFFFFF,""
+Field="sum_price","sum_price","integer",,,"","",$FFFFFFFF,""
+Field="product_id","product_id","integer",,,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+Position="Main",650,50
+ZOrder=-3
+
+[Entity]
+PName=shop
+LName=shop
+Comment=
+TableOption=
+Page=Main
+Left=950
+Top=50
+Field="shop_id","shop_id","integer",,,"","",$FFFFFFFF,""
+Field="shop_name","shop_name","character varying(40)",,,"","",$FFFFFFFF,""
+Field="shop_number","shop_number","character varying(40)",,,"","",$FFFFFFFF,""
+Field="shop_address","shop_address","character varying(40)",,,"","",$FFFFFFFF,""
+EffectMode=None
+Color=$000000
+BkColor=$FFFFFF
+Position="Main",950,50
+ZOrder=-4
